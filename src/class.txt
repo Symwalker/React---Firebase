@@ -1,0 +1,10 @@
+console firebase google pr likho
+google anylatics (jahan rojects ki reports aa rhi hoti hein mtlb a crash hogai ya nahi) 
+steps
+1 Create projects
+2 Choose web
+3 npm install firebase
+4 crete file (firebase.js) in config folder
+5 paste configCode in firebase.js
+
+firebase auth web =>search
