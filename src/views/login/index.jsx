@@ -1,14 +1,25 @@
-import React from 'react'
+import React, { useState } from 'react'
 import bg1 from "../../assets/bg1.png"
 import { Navigate, useNavigate } from 'react-router-dom'
+import { login } from '../../config/firebase'
+import { Toaster } from 'react-hot-toast'
 const Login = () => {
   const navigate = useNavigate()
+  const [email, setEmail] = useState()
+  const [password, setPassword] = useState()
+  const handleSubmit = () => {
+    login({email, password})
+      }
   return (
     <div className='relative'>
       <div className='absolute h-screen w-screen'>
         <img src={bg1} className='h-full w-full' />
       </div>
       <div className='relative top-[200px] h-[50vh] max-w-[1000px] mx-auto '>
+      <Toaster
+  position="top-center"
+  reverseOrder={false}
+/>
         <div className='flex gap-3 h-[100%]'>
           <div className='flex basis-1/2 flex-col justify-between  '>
             <div>
@@ -31,15 +42,15 @@ const Login = () => {
               
               <div className='flex flex-col gap-1'>
                 <label className='text-white px-4 font-bold'>EMAIL</label>
-                <input type="text" className='px-5 bg-[#ffffff63] py-2 outline-none text-white placeholder:text-white text-[20px] rounded-full' placeholder='Enter Your Email' />
+                <input onChange={(e)=>setEmail(e.target.value)} type="email" className='px-5 bg-[#ffffff63] py-2 outline-none text-white placeholder:text-white text-[20px] rounded-full' placeholder='Enter Your Email' />
               </div>
               
               
               <div className='flex flex-col gap-1'>
                 <label className='text-white px-4 font-bold'>PASSWORD</label>
-                <input type="text" className='px-5 bg-[#ffffff63] outline-none text-white py-2 placeholder:text-white text-[20px] rounded-full' placeholder='Enter Your Password ' />
+                <input onChange={(e)=>setPassword(e.target.value)} type="password" className='px-5 bg-[#ffffff63] outline-none text-white py-2 placeholder:text-white text-[20px] rounded-full' placeholder='Enter Your Password ' />
               </div>
-              <button className='bg-[#EF6B48] mt-2 w-1/3 mx-auto text-[18px] rounded-full text-white  py-2'>Login</button>
+              <button onClick={handleSubmit} className='bg-[#EF6B48] mt-2 w-1/3 mx-auto text-[18px] rounded-full text-white  py-2'>Login</button>
 
             </div>
           </div>
