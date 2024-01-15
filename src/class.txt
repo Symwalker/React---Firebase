@@ -8,3 +8,5 @@ steps
 5 paste configCode in firebase.js
 
 firebase auth web =>search
+
+Starting Learning Async Await
