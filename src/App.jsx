@@ -22,11 +22,8 @@ const App = () => {
   ];
   let element = useRoutes(routes);
   return (
-    <div >
-
+    <div>
       {element}
     </div>
   )
 }
-
-export default App

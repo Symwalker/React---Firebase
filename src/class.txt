@@ -10,3 +10,37 @@ steps
 firebase auth web =>search
 
 Starting Learning Async Await
+
+
+console firebase google pr likho
+google anylatics (jahan rojects ki reports aa rhi hoti hein mtlb a crash hogai ya nahi) 
+steps
+1 Create projects
+2 Choose web
+3 npm install firebase
+4 crete file (firebase.js) in config folder
+5 paste configCode in firebase.js
+
+firebase auth web =>search
+
+<<<<<<< HEAD
+
+
+firestore database me 2 cheezein ahem hoti hein
+1 Collection (collection array ki trah he)
+2 Document (Document objectski trah he)
+
+firestore
+ab hame email age or name ko data base me add karwana hein
+steps
+1 import getfirestore 
+2 variable for db
+3 import {collection, addDoc} from "firebase" 
+
+onAuthStateChanged =>yeh aik eventListener he => user ki information le kr aata he
+firebase Storage =>yahan ham image ko Store karaein ge.
+file ko onchange me e.target.files[0] se nikaltay hein
+import getDownloadUrl for getting Url
+step 1 storage me file/image ko bhejna he
+step 2 us image ka url get karwana
+step 3 DB me data add krna.
